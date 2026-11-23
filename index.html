@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Conexão em Família</title>  <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f5ed;
+            color: #29382f;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background: #244b38;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        header h1 {
+            margin-top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            max-width: none;
+            text-align: center;
+            background: #dce9dc;
+            padding: 65px 20px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #244b38;
+        }
+
+        h2, h3 {
+            color: #326347;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .card, .painel {
+            background: white;
+            border-radius: 13px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px #00000010;
+        }
+
+        button {
+            background: #326347;
+            color: white;
+            border: 0;
+            border-radius: 9px;
+            padding: 13px 18px;
+            margin-top: 12px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #244b38;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .item {
+            display: block;
+            background: white;
+            padding: 13px;
+            margin: 9px 0;
+            border-radius: 9px;
+        }
+
+        .item input {
+            margin-right: 9px;
+            accent-color: #326347;
+        }
+
+        #barraFundo {
+            height: 14px;
+            background: #d8dfd5;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        #barra {
+            height: 100%;
+            width: 0%;
+            background: #326347;
+            transition: width 0.3s;
+        }
+
+        .resultado {
+            background: #e7eee4;
+            border-radius: 10px;
+            padding: 18px;
+            margin-top: 15px;
+            white-space: pre-line;
+        }
+
+        .campo {
+            width: 100%;
+            padding: 13px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        .resposta-card {
+            background: #e7eee4;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 12px 0;
+            overflow-wrap: anywhere;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 22px 0;
+        }
+
+        footer {
+            margin-top: 30px;
+        }
+
+        @media(max-width:600px) {
+            .hero h2 {
+                font-size: 26px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            section {
+                padding: 35px 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conexão em Família</h1>      <nav>
+            <a href="#inicio">Início</a>         <a href="#problema">O problema</a>         <a href="#solucoes">Soluções</a>         <a href="#desafio">Desafio</a>         <a href="#atividade">Atividades</a>         <a href="#acordo">Acordo</a>         <a href="#perguntas">Conversar</a>
+        </nav>
+    </header>
+    <section class="hero" id="inicio">
+        <h2>Mais conexão, menos distração!</h2>     <p>
+            Equilibre o mundo digital com momentos especiais         e experiências compartilhadas em família.
+        </p>
+        <button type="button" onclick="irPara('desafio')">         Começar o desafio     </button>
+    </section>
+    <section id="problema">
+        <h2>O impacto da tecnologia</h2>      <div class="cards">
+            <div class="card">
+                <h3>Menos diálogo</h3>             <p>
+                    O uso excessivo das telas pode diminuir as conversas em família.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Distanciamento</h3>             <p>
+                    As pessoas podem compartilhar o mesmo espaço sem interagir.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Tempo de qualidade</h3>             <p>
+                    É importante reservar momentos para estar presente.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="solucoes">
+        <h2>Como melhorar a convivência?</h2>      <div class="cards">
+            <div class="card">
+                <h3>Conversar mais</h3>             <p>
+                    Ouvir e compartilhar experiências.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Estabelecer limites</h3>             <p>
+                    Combinar horários para o uso das telas.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Fazer atividades</h3>             <p>
+                    Compartilhar experiências fora do mundo digital.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="desafio">
+        <h2>Desafio de 7 dias</h2>     <p>
+            Marque as atividades que sua família completar.
+        </p>
+        <div id="barraFundo">
+            <div id="barra"></div>
+        </div>
+        <p id="progresso">
+            0 de 7 atividades concluídas.
+        </p>
+        <div id="listaDesafio"></div>
+        <p class="resultado" id="mensagem">
+            Vamos começar?
+        </p>
+        <button type="button" onclick="reiniciar()">         Reiniciar desafio     </button>
+    </section>
+    <section id="atividade">
+        <h2>Atividades em família</h2>      <div class="painel">
+            <h3 id="tituloAtividade">Que tal fazer algo juntos?</h3>          <p id="descricaoAtividade">
+                Clique para sortear uma atividade.
+            </p>
+            <button type="button" onclick="sortearAtividade()">             Sortear atividade         </button>
+        </div>
+    </section>
+    <section id="acordo">
+        <h2>Vamos criar nosso acordo?</h2>      <p>
+            Escolham os compromissos que desejam assumir.
+        </p>
+        <label class="item">         <input type="checkbox" class="compromisso" value="Evitar celulares durante as refeições.">         Evitar celulares durante as refeições.     </label>      <label class="item">         <input type="checkbox" class="compromisso" value="Reservar um momento para conversar.">         Reservar um momento para conversar.     </label>      <label class="item">         <input type="checkbox" class="compromisso" value="Realizar atividades em família.">         Realizar atividades em família.     </label>      <label class="item">         <input type="checkbox" class="compromisso" value="Respeitar os horários combinados para usar telas.">         Respeitar os horários combinados para usar telas.     </label>      <label class="item">         <input type="checkbox" class="compromisso" value="Priorizar o diálogo e o respeito.">         Priorizar o diálogo e o respeito.     </label>      <button type="button" onclick="gerarAcordo()">         Gerar nosso acordo     </button>      <div class="resultado" id="resultadoAcordo">
+            Seu acordo aparecerá aqui.
+        </div>
+        <button type="button" onclick="copiarAcordo()">         Copiar acordo     </button>
+    </section>
+    <section id="perguntas">
+        <h2>Hora de conversar!</h2>      <div class="painel">
+            <h3>Pergunta para a família:</h3>          <p id="pergunta">
+                Qual foi o melhor momento do seu dia?
+            </p>
+            <button type="button" onclick="novaPergunta()">             Nova pergunta         </button>          <hr>          <h3>Qual é a sua resposta?</h3>          <input type="text" id="nomeResposta" class="campo" placeholder="Digite seu nome">          <textarea id="respostaUsuario" class="campo" placeholder="Escreva sua resposta aqui..." rows="4"></textarea>          <button type="button" onclick="salvarResposta()">             Enviar resposta         </button>
+        </div>
+        <div class="painel">
+            <h3>Respostas da família</h3>          <div id="listaRespostas">
+                <p>
+                    As respostas aparecerão aqui.
+                </p>
+            </div>
+            <button type="button" onclick="limparRespostas()">             Limpar respostas         </button>
+        </div>
+    </section>
+    <footer>
+        <h3 style="color:white">Conexão em Família</h3>     <p>
+            Mais presença, diálogo e equilíbrio na era digital.
+        </p>
+        <p>
+            Projeto educativo desenvolvido para fins acadêmicos.
+        </p>
+    </footer>
+    <script>
+        /* NAVEGAÇÃO */ function irPara(id) {
+            document.getElementById(id).scrollIntoView();
+        } /* DESAFIO DE 7 DIAS */ var tarefas = ["Dia 1 — Fazer uma refeição sem celulares.", "Dia 2 — Conversar sobre como foi o dia.", "Dia 3 — Jogar algo em família.", "Dia 4 — Fazer uma caminhada juntos.", "Dia 5 — Assistir a um filme em família.", "Dia 6 — Preparar uma receita juntos.", "Dia 7 — Passar um momento especial sem telas."]; var feitas = []; function carregarDesafio() {
+            var html = ""; for (var i = 0; i < tarefas.length; i++) {
+                html += '<label class="item"><input type="checkbox" onchange="marcarTarefa(' + i + ',this.checked)" ' + (feitas.indexOf(i) !== -1 ? "checked": "") + '>' + tarefas[i] + '</label>';
+            } document.getElementById("listaDesafio").innerHTML = html; atualizarProgresso();
+        } function marcarTarefa(indice, marcada) {
+            if (marcada && feitas.indexOf(indice) === -1) {
+                feitas.push(indice);
+            } if (!marcada) {
+                feitas = feitas.filter(function(item) {
+                    return item !== indice;
+                });
+            } try {
+                localStorage.setItem("desafioFamilia", JSON.stringify(feitas));
+            } catch (e) {} carregarDesafio();
+        } function atualizarProgresso() {
+            var total = feitas.length; document.getElementById("barra").style.width = (total / 7 * 100) + "%"; document.getElementById("progresso").textContent = total + " de 7 atividades concluídas."; document.getElementById("mensagem").textContent = total === 7 ? "Parabéns! Você concluiu o desafio!": total > 0 ? "Muito bem! Continue assim!": "Vamos começar? Marque sua primeira atividade!";
+        } function reiniciar() {
+            feitas = []; try {
+                localStorage.removeItem("desafioFamilia");
+            } catch (e) {} carregarDesafio();
+        } /* SORTEADOR DE ATIVIDADES */ var atividades = [["Noite de jogos 🎲", "Escolham um jogo e divirtam-se juntos."], ["Dia de cozinhar 🍕", "Preparem uma receita em família."], ["Sessão de cinema 🍿", "Escolham um filme para assistir juntos."], ["Caminhada 🌳", "Façam uma caminhada e conversem."], ["Desafio da memória 🧠", "Compartilhem lembranças divertidas."], ["Piquenique 🧺", "Preparem um lanche e aproveitem juntos."],     ["Dia da música 🎵", "Criem uma playlist em família."] ];  var ultimaAtividade = -1;  function sortearAtividade() {     var numero;      do {         numero = Math.floor(Math.random() * atividades.length);     } while (numero === ultimaAtividade);      ultimaAtividade = numero;      document.getElementById("tituloAtividade").textContent =         atividades[numero][0];      document.getElementById("descricaoAtividade").textContent =         atividades[numero][1]; }   /* GERADOR DE ACORDO */  function gerarAcordo() {     var caixas = document.querySelectorAll(".compromisso");     var texto = "NOSSO ACORDO FAMILIAR\n\n";     var total = 0;      for (var i = 0; i < caixas.length; i++) {         if (caixas[i].checked) {             total++;             texto += total + ". " + caixas[i].value + "\n";         }     }      if (total === 0) {         document.getElementById("resultadoAcordo").textContent =             "Selecione pelo menos um compromisso!";         return;     }      texto += "\nNosso objetivo é ter mais diálogo, respeito e equilíbrio.";      document.getElementById("resultadoAcordo").textContent = texto; }   /* COPIAR ACORDO */  function copiarAcordo() {     var texto = document.getElementById("resultadoAcordo").textContent;      if (         texto === "Seu acordo aparecerá aqui." ||         texto === "Selecione pelo menos um compromisso!"     ) {         alert("Primeiro, gere seu acordo!");         return;     }      var campo = document.createElement("textarea");     campo.value = texto;      document.body.appendChild(campo);     campo.select();      try {         document.execCommand("copy");         alert("Acordo copiado!");     } catch (e) {         alert("Selecione o texto do acordo e copie manualmente.");     }      document.body.removeChild(campo); }   /* PERGUNTAS ALEATÓRIAS */  var perguntas = [     "Qual foi o melhor momento do seu dia?",     "Qual atividade gostaria de fazer no fim de semana?",     "O que significa passar tempo de qualidade juntos?",     "Qual lembrança em família você nunca esquece?",     "O que podemos melhorar na nossa convivência?",     "Qual passeio gostaria de fazer com a família?",     "Qual é seu jogo favorito para jogar em família?",     "O que você gostaria de aprender com alguém da família?",     "Qual é uma coisa pela qual você é grato hoje?",     "Que momento especial gostaria de repetir?" ];  var ultimaPergunta = -1;  function novaPergunta() {     var numero;      do {         numero = Math.floor(Math.random() * perguntas.length);     } while (numero === ultimaPergunta);      ultimaPergunta = numero;      document.getElementById("pergunta").textContent =         perguntas[numero]; }   /* RESPOSTAS DA FAMÍLIA */  var respostasFamilia = [];  function salvarResposta() {     var nome = document.getElementById("nomeResposta").value.trim();     var resposta = document.getElementById("respostaUsuario").value.trim();      if (nome === "") {         alert("Digite seu nome antes de enviar!");         return;     }      if (resposta === "") {         alert("Escreva sua resposta antes de enviar!");         return;     }      var perguntaAtual =         document.getElementById("pergunta").textContent;      respostasFamilia.push({         nome: nome,         pergunta: perguntaAtual,         resposta: resposta     });      atualizarRespostas();      document.getElementById("respostaUsuario").value = "";      alert("Sua resposta foi registrada!"); }  function atualizarRespostas() {     var lista = document.getElementById("listaRespostas");      lista.innerHTML = "";      if (respostasFamilia.length === 0) {         lista.textContent = "As respostas aparecerão aqui.";         return;     }      respostasFamilia.forEach(function(item) {         var cartao = document.createElement("div");         cartao.className = "resposta-card";          var nome = document.createElement("h3");         nome.textContent = item.nome;          var pergunta = document.createElement("p");         pergunta.textContent = "Pergunta: " + item.pergunta;          var resposta = document.createElement("p");         resposta.textContent = "Resposta: " + item.resposta;          cartao.appendChild(nome);         cartao.appendChild(pergunta);         cartao.appendChild(resposta);          lista.appendChild(cartao);     }); }  function limparRespostas() {     respostasFamilia = [];     atualizarRespostas();     alert("Histórico de respostas limpo."); }   /* INICIALIZAÇÃO */  try {     feitas = JSON.parse(localStorage.getItem("desafioFamilia")) || [];      if (!Array.isArray(feitas)) {         feitas = [];     } } catch (e) {     feitas = []; }  carregarDesafio();  </script>  </body> </html>
